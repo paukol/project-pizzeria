@@ -4,12 +4,14 @@ export const select = {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product',
     bookingWidget: '#template-booking-widget',
+
   },
   containerOf: {
     menu: '#product-list',
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
+
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -40,6 +42,7 @@ export const select = {
       input: 'input[type="range"]',
       output: '.output',
     },
+    carousel: '.carousel-section',
   },
 
   cart: {
@@ -64,6 +67,8 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    form: '.booking-form',
+    starters: '[name="starter"]'
   },
   nav: {
     links: '.main-nav a',
@@ -82,6 +87,8 @@ export const classNames = {
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    tableClicked: 'clicked',
+    tableSelected: 'selected',
   },
   nav: {
     active: 'active',
