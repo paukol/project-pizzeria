@@ -71,7 +71,7 @@ class Product {
     
   initOrderForm(){
     const thisProduct = this;
-    console.log('initOrderForm', thisProduct);
+    // console.log('initOrderForm', thisProduct);
     thisProduct.form.addEventListener('submit', function(event){
       event.preventDefault();
       thisProduct.processOrder();
@@ -121,7 +121,7 @@ class Product {
 
         // determine option value, e.g. optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
         const option = param.options[optionId];
-        console.log(optionId, option);
+        // console.log(optionId, option);
 
         // check if there is param with a name of paramId in formData and if it includes optionId
         const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
