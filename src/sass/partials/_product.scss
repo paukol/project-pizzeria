@@ -19,6 +19,10 @@
   &__name {
     @extend .h1;
     position: relative;
+    position: relative;
+    margin: 0;
+    font-weight: $font-semibold;
+    text-transform: uppercase;
     
   }
 

@@ -3,8 +3,9 @@ import{settings, templates, select, classNames} from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Bookings.js';
+import Home from './components/Home.js';
 
-const app = {
+export const app = {
 
   initPages: function(){
     const thisApp = this;
@@ -12,6 +13,7 @@ const app = {
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
 
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
+
 
     const idFromHash = window.location.hash.replace('#/', '');
     console.log('idFromHash', idFromHash);
@@ -101,6 +103,13 @@ const app = {
     thisApp.booking = new Booking(bookingWidgetContainer);
   },
 
+  initHome: function(){
+    const thisApp = this;
+
+    const homeElement = document.querySelector(select.containerOf.home);
+    thisApp.home = new Home(homeElement);
+  },
+
   init: function(){
     const thisApp = this;
     console.log('*** App starting ***');
@@ -109,9 +118,11 @@ const app = {
     console.log('settings:', settings);
     console.log('templates:', templates);
 
-    thisApp.initPages();
     thisApp.initData();
+    thisApp.initCart();
+    thisApp.initPages();
     thisApp.initBooking();
+    thisApp.initHome();
       
   },
 
@@ -132,4 +143,5 @@ const app = {
 };
 
 app.init();
-app.initCart();
+
+export default app; 
