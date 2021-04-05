@@ -58,16 +58,18 @@ class Home {
   }
 
   navigate(){
+
     const thisHome = this;
 
     thisHome.dom.bookTable.addEventListener('click', function(){
       app.activatePage('booking');
-      window.location.hash = '/#booking';
+      window.location.hash = '#/booking';
     });
 
     thisHome.dom.orderOnline.addEventListener('click', function(){
+      
       app.activatePage('order');
-      window.location.hasg = '/#order';
+      window.location.hash = '#/order';
     });
   }
 }
