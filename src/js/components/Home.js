@@ -43,31 +43,18 @@ class Home {
     });
   }
 
-  initActions(){
-    const thisHome = this;
-
-    thisHome.dom.orderOnline.addEventListener('click', function(event){
-      event.preventDefault();
-      console.log('clicked!');
-    });
-
-    thisHome.dom.bookTable.addEventListener('click', function(event){
-      event.preventDefault();
-      console.log('clicked2!');
-    });
-  }
-
   navigate(){
 
     const thisHome = this;
 
-    thisHome.dom.bookTable.addEventListener('click', function(){
+    thisHome.dom.bookTable.addEventListener('click', function(event){
+      event.preventDefault();
       app.activatePage('booking');
       window.location.hash = '#/booking';
     });
 
-    thisHome.dom.orderOnline.addEventListener('click', function(){
-      
+    thisHome.dom.orderOnline.addEventListener('click', function(event){
+      event.preventDefault();
       app.activatePage('order');
       window.location.hash = '#/order';
     });
